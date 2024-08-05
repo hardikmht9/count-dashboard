@@ -1,6 +1,6 @@
 resource "newrelic_one_dashboard" "exampledash" {
 name        = "preps-dashboard"
-count =1
+count = length(var.dashboard)
 
   page {
     name = var.dashboard[count.index].page_name
